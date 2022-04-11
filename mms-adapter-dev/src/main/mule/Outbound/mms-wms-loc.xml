@@ -62,7 +62,7 @@ fun getWhs(Store) = WhsPrex[0] ++ ('00000' ++ Store)[sizeOf(Store) to (sizeOf(St
 	CUST_INB_IFD: {
 		(LocDta map (LocVal, Index) -> {
 		CTRL_SEG: {
-			TRNNAM: DftIFD."CNTRL_SEG"."TRANNAM"[0],
+			TRNNAM: DftIFD."CNTRL_SEG"."TRANNAM"[0] default ' ',
 			TRNVER: DftIFD."CNTRL_SEG"."TRANVER"[0],
 //			WHSE_ID: Warehouse[0][0],
 			WHSE_ID :vars.WMS_Instance,
